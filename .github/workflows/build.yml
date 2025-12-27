@@ -107,8 +107,8 @@ jobs:
       - name: Publish artifacts
         uses: softprops/action-gh-release@v2
         with:
-          name: SDL3-${{ env.sdl3 }} Runtimes
-          tag_name: sdl3-${{ env.sdl3 }}
+          name: SDL3-${{ env.sdl3 }} native binaries
+          tag_name: v${{ env.sdl3 }}
           files: |
             artifacts/${{ env.runtime }}
             artifacts/${{ env.checksums }}
