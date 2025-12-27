@@ -1,0 +1,20 @@
+name: Bug
+description: File a bug found in Quack runtimes.
+labels: ['triage']
+type: Bug
+assignees:
+  - beauchama
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to report a bug. Please fill in the information below to help us reproduce the issue you are experiencing.
+        Make sure to search if the issue has already been reported ([quack.runtimes/issues](https://github.com/kappaduck/quack.runtimes/issues)) before submitting a new one.
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Description
+      description: Please provide a detailed description of the bug you are experiencing.
+      placeholder: The runtimes have corrupted files...
+    validations:
+      required: true
