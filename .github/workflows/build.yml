@@ -1,27 +1,25 @@
 name: Build SDL3 Runtimes
 
 on:
-  push:
-    paths: ['build-linux.sh', 'build-windows.sh']
   workflow_dispatch:
     inputs:
       sdl3:
         description: 'SDL3 version to build'
         required: false
-        default: '3.2.28'
+        default: '3.2.30'
       image:
         description: 'SDL3_Image version to build'
         required: false
-        default: '3.2.4'
+        default: '3.2.6'
       ttf:
         description: 'SDL3_TTF version to build'
         required: false
         default: '3.2.2'
 
 env:
-  sdl3: ${{ github.event.inputs.sdl3 || '3.2.28' }}
-  image: ${{ github.event.inputs.image || '3.2.4' }}
-  ttf: ${{ github.event.inputs.ttf || '3.2.2' }}
+  sdl3: ${{ github.event.inputs.sdl3 }}
+  image: ${{ github.event.inputs.image }}
+  ttf: ${{ github.event.inputs.ttf }}
 
 jobs:
   build-linux:
@@ -109,6 +107,10 @@ jobs:
         with:
           name: SDL3-${{ env.sdl3 }} native binaries
           tag_name: v${{ env.sdl3 }}
+          body: |
+            SDL3 Version: ${{ env.sdl3 }}
+            SDL3_Image Version: ${{ env.image }}
+            SDL3_TTF Version: ${{ env.ttf }}
           files: |
             artifacts/${{ env.runtime }}
             artifacts/${{ env.checksums }}
