@@ -6,14 +6,13 @@ Quack! Runtimes hosts [SDL] and its extensions ([SDL_image], [SDL_ttf], [SDL_mix
 
 Below is a list of Quack! versions and their compatible SDL versions:
 
-| Quack! version | SDL version | SDL_image version | SDL_mixer version | SDL_ttf version |
-| :------------: | :---------: | :---------------: | :---------------: | :-------------: |
-|    `source`    |  `3.2.28`   |      `3.2.4`      |       `N/A`       |     `3.2.2`     |
-|    `0.2.0`     |  `3.2.28`   |      `3.2.4`      |       `N/A`       |     `3.2.2`     |
-|    `0.1.0`     |  `3.2.18`   |       `N/A`       |       `N/A`       |      `N/A`      |
+| Quack! version | SDL version | SDL_image version | SDL_mixer version | SDL_ttf version | SDL_mixer version |
+| :------------: | :---------: | :---------------: | :---------------: | :-------------: | :---------------: |
+|    `source`    |   `3.4.0`   |      `3.2.6`      |       `N/A`       |     `3.2.2`     |     `waiting`     |
+|    `0.3.0`     |  `3.2.30`   |      `3.2.6`      |       `N/A`       |     `3.2.2`     |       `N/A`       |
+|    `0.2.0`     |  `3.2.28`   |      `3.2.4`      |       `N/A`       |     `3.2.2`     |       `N/A`       |
+|    `0.1.0`     |  `3.2.18`   |       `N/A`       |       `N/A`       |      `N/A`      |       `N/A`       |
 
-> Support for SDL_mixer is planned for future releases. It needs SDL3 3.4.0 which is not yet released.
->
 > The current Quack! development can update the SDL dependencies many times before the release.
 
 ## Installation
