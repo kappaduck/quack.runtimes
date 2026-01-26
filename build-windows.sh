@@ -15,16 +15,7 @@ SDL3_ttf=release-$3
 
 # Set runtime directories
 Windows_Runtime=artifacts/runtimes/win-x64/native
-mkdir -p ${Windows_Runtime} toolchains
-
-# Setup MinGW toolchain
-cat > toolchains/x86_64-w64-mingw32.cmake <<EOL
-SET(CMAKE_SYSTEM_NAME Windows)
-SET(CMAKE_SYSTEM_PROCESSOR x86_64)
-find_program(CMAKE_C_COMPILER NAMES x86_64-w64-mingw32-gcc REQUIRED)
-find_program(CMAKE_CXX_COMPILER NAMES x86_64-w64-mingw32-g++ REQUIRED)
-find_program(CMAKE_RC_COMPILER NAMES x86_64-w64-mingw32-windres windres REQUIRED)
-EOL
+mkdir -p ${Windows_Runtime}
 
 # Build SDL3
 git clone --branch ${SDL3} --depth 1 https://github.com/libsdl-org/SDL.git
@@ -64,6 +55,6 @@ cmake -S SDL_ttf -B SDL_ttf/build-windows -G Ninja \
       && cp -r SDL_ttf/bin-windows/bin/*.dll ${Windows_Runtime}
 
 # Cleanup
-rm -rf SDL SDL_image SDL_ttf toolchains
+rm -rf SDL SDL_image SDL_ttf
 
 echo "SDL3-$1 build complete."
