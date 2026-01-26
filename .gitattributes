@@ -5,31 +5,18 @@
 # Documents
 
 *.md        text diff=markdown linguist-detectable
-*.txt       text
 
 # Github files
 
 codeowners  text
 
-# Graphics
+# Cmake files
 
-*.png       binary
-*.jpg       binary
-*.jpeg      binary
-*.gif       binary
+*.cmake     text eol=lf
 
 # Linux script files
 
-*.bash      text eol=lf
-*.fish      text eol=lf
 *.sh        text eol=lf
-*zsh        text eol=lf
-
-# Windows script files
-
-*.bat       text eol=crlf
-*.cmd       text eol=crlf
-*.ps1       text eol=crlf
 
 # Serialisation
 

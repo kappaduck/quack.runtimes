@@ -17,12 +17,7 @@ indent_size = 2
 [*.md]
 trim_trailing_whitespace = false
 
-# Window script files
+# Linux files
 
-[*.{bat,cmd,ps1}]
-end_of_line = crlf
-
-# Linux script files
-
-[*.sh]
+[*.{sh, cmake}]
 end_of_line = lf
